@@ -1,0 +1,245 @@
+//start general styles for layout
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  margin-top: auto;
+  background-color: #343a40;
+  color: #fff;
+}
+.object-fit-cover {
+  object-fit: cover;
+}
+//end general styles for layout
+
+//start styles for navbar and header
+nav {
+    width: 100%;
+    z-index: 999;
+  .container-fluid {
+    .navbar-toggler {
+      margin-left: auto;
+      border: none;
+    }
+    #navbarNav {
+      ul {
+        list-style: none;
+        li a {
+          text-decoration: none;
+          padding: 0 10px;
+          margin: 5px 10px;
+          color: #ffffff;
+          transition: color 200ms ease-in-out;
+          &:hover {
+            color: #dc3545;
+          }
+        }
+      }
+    }
+  }
+}
+
+//End styles for navbar and header
+
+//start styles for main news section
+.main-news-container {
+  border-bottom: 2px solid #000;
+  a.single_news_unit {
+    min-height: 300px;
+    height: 400px;
+  }
+  .middle-column {
+    .news-single {
+      a {
+        img {
+          min-height: 190px;
+          max-height: 190px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+//end styles for main news section
+
+// start styles for egypt news slider section
+.slick-slide {
+  margin: 0 10px;
+}
+.news-single {
+  position: relative;
+  p {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: #ffffff;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+  }
+}
+.slider-arrow {
+  color: #ffffff;
+  background-color: #dc3545;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 10;
+  top: 45%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding: 10px 3px;
+  i {
+    position: relative;
+    &.fa-chevron-right {
+      left: 5px;
+    }
+    &.fa-chevron-left {
+      right: 5px;
+    }
+  }
+}
+.custom-arrow-prev {
+  right: 10px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+.custom-arrow-next {
+  left: 10px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+// End styles for egypt news slider section
+
+//start styles for features post section
+.section_top_border {
+  border-top: 2px solid #000;
+  .features-news-wrapper {
+    .single_feature {
+      max-width: 47%;
+    }
+  }
+  .top-stories-wrapper {
+    height: 100%;
+    justify-content: space-around;
+    .single_top_post {
+      padding: 10px 0;
+      border-top: 1px solid rgb(153 151 151 / 58%);
+      a {
+        transition: color 250ms ease-in-out;
+        &:hover {
+          text-decoration: none;
+          p {
+            color: #dc3545;
+          }
+        }
+      }
+      p,span {
+        color: #000;
+        font-weight: bold;
+      }
+      &:last-child {
+        border-bottom: 1px solid rgb(153 151 151 / 58%);
+      }
+    }
+  }
+}
+
+//end styles for features post section
+
+//start footer styles
+.footer {
+  .copyright {
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+// end footer styles
+
+//start media queries
+@media(max-width: 1200px) {
+  nav {
+    .container-fluid {
+      #navbarNav {
+        ul {
+          li a {
+            text-decoration: none;
+            margin: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+@media(max-width: 992px) {
+  .navbar {
+    padding: 0;
+    .container-fluid {
+      position: relative;
+      .navbar-toggler {
+        &:focus {
+          outline: none;
+          border: none;
+        }
+      }
+    }
+    .navbar-collapse {
+        position: absolute;
+        width: 100%;
+        top: 38px;
+        z-index: 999;
+        background-color: rgb(0 0 0 / 78%);
+      ul {
+        width: 100%;
+        li {
+          display: flex;
+          a {
+            width: 100%;
+            padding: 10px 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media(max-width: 768px) {
+  .main-news-container{
+    a {
+      &.single_news_unit {
+        margin: 20px 0;
+        height: auto;
+        width: 100%;
+        min-height: auto;
+        height: auto;
+      }
+    }
+    .middle-column {
+      .news-single {
+        a {
+          margin: 20px 0;
+          img {
+            min-height: auto;
+            max-height: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media(max-width: 576px) {
+  .news-single {
+    p {
+      padding: 5px;
+    }
+  }
+}
+//end media queries
